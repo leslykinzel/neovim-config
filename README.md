@@ -1,6 +1,13 @@
 # blackout-vim
  minimalist vim config
 
+## Using
+
+Plugin manager: https://github.com/junegunn/vim-plug
+File explorer: https://github.com/preservim/nerdtree
+Theme: https://github.com/andreasvc/vim-256noir
+Status: https://github.com/vim-airline/vim-airline
+
 ## Windows
 
 ```
