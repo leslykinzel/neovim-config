@@ -11,7 +11,7 @@ Status: https://github.com/vim-airline/vim-airline
 ## Windows
 
 ```
-C:\Users\name\AppData\Local\nvim\ files go here
+C:\Users\name\AppData\Local\vim\ files go here
 ```
 
 Install vim plug (powershell):
@@ -21,6 +21,3 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
 ```
 
-## Ubuntu
-
---
