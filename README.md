@@ -3,20 +3,15 @@
 
 ## Setup
 
-    Plugin manager: https://github.com/wbthomason/packer.nvim
+Plugin manager: https://github.com/wbthomason/packer.nvim
 
 ### Windows
 
-    ```
     C:\Users\name\AppData\Local\nvim\<files-go-here>
-    ```
 
 ### Ubuntu / MacOS
 
-    ```
     ~/.config/nvim/<files-go-here>
-    ```
-
 
 ## Plugins
 
