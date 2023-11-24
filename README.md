@@ -9,7 +9,7 @@ Plugin manager: https://github.com/wbthomason/packer.nvim
 
     C:\Users\name\AppData\Local\nvim\<files-go-here>
 
-### Unix
+### Linux / MacOS
 
     ~/.config/nvim/<files-go-here>
 
