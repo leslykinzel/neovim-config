@@ -1,4 +1,4 @@
-# BLACKOUT-NVIM
+# Blackout-nvim
  My neovim config
 
 ## Setup
