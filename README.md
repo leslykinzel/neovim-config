@@ -1,5 +1,5 @@
 # BLACKOUT-NVIM
- My personal neovim config
+ My neovim config
 
 ## Setup
 
