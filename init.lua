@@ -1,3 +1,3 @@
-# Blackout-nvim
+-- blackout-nvim
 
-
+require("core.keymap")
