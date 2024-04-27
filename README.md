@@ -3,8 +3,7 @@
 This is my neovim configuration that I use on Ubuntu, Windows, and MacOS. 
 
 ### Installation directories:
-
-Linux / MacOS / WSL
+Unix
 ```
 ~/.config/nvim/
 ```
