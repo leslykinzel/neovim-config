@@ -12,3 +12,4 @@ Windows
 ```
 ~\AppData\Local\nvim\
 ```
+*Treesitter requires a C compiler
