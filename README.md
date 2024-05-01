@@ -1,6 +1,6 @@
 # Blackout-nvim
 
-This is my neovim configuration that I use on Ubuntu, Windows, and MacOS. 
+Stable Neovim configuration that I use on Ubuntu, Windows, and MacOS. 
 
 ### Installation directories:
 Unix
