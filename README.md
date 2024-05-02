@@ -2,14 +2,13 @@
 
 Stable Neovim configuration that I use on Linux, Windows, and MacOS. 
 
-### Installation directories:
 Linux / MacOS
 ```
-~/.config/nvim/
+git clone https://github.com/LeslyKinzel/Blackout-Neovim ~/.config/nvim/
 ```
 
 Windows
 ```
-~\AppData\Local\nvim\
+git clone https://github.com/LeslyKinzel/Blackout-Neovim ~\AppData\Local\nvim\
 ```
 *Treesitter requires a C compiler
