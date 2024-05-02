@@ -1,4 +1,4 @@
-# Blackout-nvim
+# Blackout-Neovim
 
 Stable Neovim configuration that I use on Ubuntu, Windows, and MacOS. 
 
