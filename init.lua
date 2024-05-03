@@ -1,4 +1,4 @@
--- blackout-nvim
+-- Blackout-Nvim
 
 require("core.keymaps")
 require("core.settings")

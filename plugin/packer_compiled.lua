@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/helios/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["midnight.nvim"] = {
-    loaded = true,
-    path = "/home/helios/.local/share/nvim/site/pack/packer/start/midnight.nvim",
-    url = "https://github.com/dasupradyumna/midnight.nvim"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/helios/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -118,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/helios/.local/share/nvim/site/pack/packer/start/ultimate-autopair.nvim",
     url = "https://github.com/altermo/ultimate-autopair.nvim"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/helios/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 

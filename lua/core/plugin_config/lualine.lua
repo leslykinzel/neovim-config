@@ -1,7 +1,7 @@
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'ayu_dark',
+        theme = 'vscode',
     },
     sections = {
         lualine_a = {
