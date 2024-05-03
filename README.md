@@ -11,4 +11,3 @@ Windows
 ```
 git clone https://github.com/LeslyKinzel/Blackout-Neovim ~\AppData\Local\nvim\
 ```
-*Treesitter requires a C compiler
