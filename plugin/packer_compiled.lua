@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/helios/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/helios/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -113,11 +118,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/helios/.local/share/nvim/site/pack/packer/start/ultimate-autopair.nvim",
     url = "https://github.com/altermo/ultimate-autopair.nvim"
-  },
-  ["vscode.nvim"] = {
-    loaded = true,
-    path = "/home/helios/.local/share/nvim/site/pack/packer/start/vscode.nvim",
-    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 

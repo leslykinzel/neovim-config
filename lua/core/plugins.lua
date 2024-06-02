@@ -13,8 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'Mofiqul/vscode.nvim'
-    -- use 'dasupradyumna/midnight.nvim'
+    use "rebelot/kanagawa.nvim"
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
