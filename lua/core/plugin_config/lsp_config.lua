@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "clangd" }
+    ensure_installed = { "lua_ls", "clangd", "jedi_language_server" }
 })
 
 local on_attach = function(_, _)
@@ -17,5 +17,9 @@ require("lspconfig").lua_ls.setup {
 }
 
 require("lspconfig").clangd.setup {
+    on_attach = on_attach
+}
+
+require("lspconfig").jedi_language_server.setup {
     on_attach = on_attach
 }
