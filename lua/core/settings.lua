@@ -1,7 +1,7 @@
 -- Editor Settings
 vim.opt.cursorline = true
 vim.opt.number = true
-vim.opt.scrolloff = 15
+vim.opt.scrolloff = 8
 
 -- Indentation
 vim.opt.tabstop = 4
