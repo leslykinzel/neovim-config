@@ -1,6 +1,6 @@
 # Blackout-Neovim
 
-Stable Neovim configuration
+Stable Neovim configuration for software development.
 - Syntax highlighting
 - Smart brackets/quotes
 - Telescope & File tree
@@ -13,10 +13,7 @@ Linux / MacOS
 git clone https://github.com/LeslyKinzel/Blackout-Neovim ~/.config/nvim/
 ```
 
-Windows*
+Windows (not tested, just use WSL)
 ```
 git clone https://github.com/LeslyKinzel/Blackout-Neovim ~\AppData\Local\nvim\
 ```
-_*I don't use Windows anymore, so have not tested in a while._
-
-_Its probably better to use WSL and just edit your Windows file system via `/mnt/C/Users/your_name/`_
