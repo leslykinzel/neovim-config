@@ -20,6 +20,6 @@ require("lspconfig").clangd.setup {
     on_attach = on_attach
 }
 
-require("lspconfig").jedi_language_server.setup {
+require("lspconfig").gopls.setup {
     on_attach = on_attach
 }
