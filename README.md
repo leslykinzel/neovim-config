@@ -13,7 +13,7 @@ Linux / MacOS
 git clone https://github.com/LeslyKinzel/Blackout-Neovim ~/.config/nvim/
 ```
 
-Windows (not tested, just use WSL)
+Windows
 ```
 git clone https://github.com/LeslyKinzel/Blackout-Neovim ~\AppData\Local\nvim\
 ```
