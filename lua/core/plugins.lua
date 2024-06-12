@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
     }
     use 'lewis6991/gitsigns.nvim'
-
+    use "lukas-reineke/indent-blankline.nvim"
     if packer_bootstrap then
         require('packer').sync()
     end
