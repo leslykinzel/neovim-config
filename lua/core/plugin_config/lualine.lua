@@ -2,6 +2,8 @@ require('lualine').setup {
     options = {
         icons_enabled = true,
         theme = 'gruvbox-material',
+        component_separators = '',
+        section_separators = { left = '', right = ''},
     },
     sections = {
         lualine_a = {
@@ -11,19 +13,22 @@ require('lualine').setup {
             }
         },
         lualine_b = {
-            'branch'
+            {
+                'branch',
+                icon = ''
+            }
         },
         lualine_c = {
-
+            'diff'
         },
         lualine_x = {
 
         },
         lualine_y = {
-
+            'encoding'
         },
         lualine_z = {
-
+            'mode'
         }
     },
     inactive_sections = {

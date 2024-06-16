@@ -2,6 +2,7 @@
 vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.scrolloff = 4
+vim.opt.cmdheight = 0
 
 -- Indentation
 vim.opt.tabstop = 4
