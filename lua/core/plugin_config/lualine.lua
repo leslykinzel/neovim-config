@@ -19,10 +19,10 @@ require('lualine').setup {
             }
         },
         lualine_c = {
-            'diff'
+            'diff',
         },
         lualine_x = {
-
+            'diagnostics'
         },
         lualine_y = {
             'encoding'
