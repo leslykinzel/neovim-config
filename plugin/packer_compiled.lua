@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/lesly.kinzel/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/Users/lesly.kinzel/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/lesly.kinzel/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
