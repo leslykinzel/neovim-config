@@ -34,7 +34,6 @@ return require('packer').startup(function(use)
     }
     use 'lewis6991/gitsigns.nvim'
     use "lukas-reineke/indent-blankline.nvim"
-    use "terrortylor/nvim-comment"
     if packer_bootstrap then
         require('packer').sync()
     end
