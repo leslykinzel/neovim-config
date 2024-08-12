@@ -19,7 +19,7 @@ Stable Neovim configuration for software development.
 
 - [x] [**NerdFonts**](https://www.nerdfonts.com/)
     
-    Not mandatory, but will give you all the special icons & characters that make Neovim look cool. I am using the UbuntuMono NerdFont.
+    Not mandatory, but will give you all the special icons & characters that make Neovim look cool. I am using the Caskaydia Mono Nerd Font.
 
 ## Installation
 
