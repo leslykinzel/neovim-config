@@ -8,22 +8,22 @@ Stable Neovim configuration for software development.
 
 ## Prerequisites
 
-- [x] **C Compiler**
+- **C Compiler**
 
-    If you are using gcc, you might be missing some standard header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/) as some Linux distros may not have it pre-installed.
+    If you're using gcc, you might be missing some standard header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/) as a lot of Linux distros don't have it pre-installed.
+    If you're on Windows & not using WSL for whatever reason, [winlibs](https://www.winlibs.com/#download-release) worked for me.
 
+- **LSP Dependencies**
 
-- [x] **LSP Dependencies**
+    LSPs are managed by [Mason](https://github.com/williamboman/mason.nvim). Some LSPs need npm, Go, or some other package manager. It can be kind of annoying but check `:MasonLog` for details about each installation.
 
-    LSPs are managed by [Mason](https://github.com/williamboman/mason.nvim). Some LSPs require npm, python/pip, or Go to install. Check the `:MasonLog` for details about each installation.
-
-- [x] [**NerdFonts**](https://www.nerdfonts.com/)
+- [**NerdFonts**](https://www.nerdfonts.com/)
     
-    Not mandatory, but will give you all the special icons & characters that make Neovim look cool. I am using the Caskaydia Mono Nerd Font.
+    Not mandatory, but will give you all the special icons & characters that make Neovim look cool. I'm using the Caskaydia Mono Nerd Font.
 
 ## Installation
 
-Linux / MacOS
+Linux / MacOS  / WSL
 ```
 git clone https://github.com/LeslyKinzel/Blackout-Neovim ~/.config/nvim/
 ```
