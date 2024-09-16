@@ -1,4 +1,4 @@
-# Blackout-Neovim
+# Neovim Config
 
 Stable Neovim configuration for software development.
 
