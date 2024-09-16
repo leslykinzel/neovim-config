@@ -25,10 +25,10 @@ Stable Neovim configuration for software development.
 
 Linux / MacOS  / WSL
 ```
-git clone https://github.com/LeslyKinzel/Blackout-Neovim ~/.config/nvim/
+git clone https://github.com/LeslyKinzel/neovim-config ~/.config/nvim/
 ```
 
 Windows
 ```
-git clone https://github.com/LeslyKinzel/Blackout-Neovim ~\AppData\Local\nvim\
+git clone https://github.com/LeslyKinzel/neovim-config ~\AppData\Local\nvim\
 ```
