@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use "rebelot/kanagawa.nvim"
+    use "EdenEast/nightfox.nvim"
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
@@ -33,7 +33,6 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
     }
     use 'lewis6991/gitsigns.nvim'
-    use "lukas-reineke/indent-blankline.nvim"
     if packer_bootstrap then
         require('packer').sync()
     end
