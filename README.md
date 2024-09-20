@@ -2,9 +2,7 @@
 
 Stable Neovim configuration for software development.
 
-
-<img width="1440" alt="nvim_preview" src="https://github.com/user-attachments/assets/a77eab5d-ce06-4575-9355-7a9621f4d935">
-
+![nvim-preview](https://github.com/user-attachments/assets/d0de6ab3-cdb7-464f-947c-07ab4da1a4ed)
 
 ## Prerequisites
 
