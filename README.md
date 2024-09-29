@@ -1,6 +1,6 @@
 # Neovim Config
 
-Stable Neovim configuration for software development.
+I use this repository as a way of backing up and syncing my `~/.config/nvim/` directory across multiple systems.
 
 ![nvim-preview](https://github.com/user-attachments/assets/d0de6ab3-cdb7-464f-947c-07ab4da1a4ed)
 
