@@ -1,3 +1,7 @@
+-- https://github.com/wbthomason/packer.nvim must be set up 
+-- for this config to work. Run the command :PackerSync to
+-- install, update, or remove any plugins that are already
+-- installed.
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -11,9 +15,13 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- Plugins each have their own config file within
+-- lua/core/plugin_config/ each config file needs
+-- to be called from the init.lua file in the same
+-- directory.
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'EdenEast/nightfox.nvim'
+    use 'EdenEast/nightfox.nvim'            -- Color theme is installed here and enabled in lua/core/plugin_config/theme.lua
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
