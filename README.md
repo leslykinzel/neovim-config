@@ -11,7 +11,7 @@ I use this repository as a way of backing up and syncing my `~/.config/nvim/` di
 - **C Compiler**
 
     If you're using gcc, you might be missing some header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/) as a lot of Linux distros don't have it pre-installed.
-    If you're on Windows & not using WSL for whatever reason, [winlibs](https://www.winlibs.com/#download-release) worked for me.
+    If you're on Windows & not using WSL/Cygwin for whatever reason, [winlibs](https://www.winlibs.com/#download-release) worked for me.
 
 - **LSP Dependencies**
 
@@ -23,7 +23,7 @@ I use this repository as a way of backing up and syncing my `~/.config/nvim/` di
 
 ## Installation
 
-Linux / MacOS  / WSL
+Unix
 ```
 git clone https://github.com/LeslyKinzel/neovim-config ~/.config/nvim/
 ```
