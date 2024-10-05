@@ -21,7 +21,7 @@ local packer_bootstrap = ensure_packer()
 -- directory.
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'EdenEast/nightfox.nvim'            -- Color theme is installed here and enabled in lua/core/plugin_config/theme.lua
+    use "blazkowolf/gruber-darker.nvim"
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
