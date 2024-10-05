@@ -7,10 +7,7 @@ require('lualine').setup {
     },
     sections = {
         lualine_a = {
-            {
-                'filename',
-                path = 4,
-            }
+            'mode',
         },
         lualine_b = {
             {
@@ -28,7 +25,11 @@ require('lualine').setup {
             'encoding'
         },
         lualine_z = {
-            'mode'
+            {
+                'filename',
+                path = 4
+            },
+            'fileformat'
         }
     },
     inactive_sections = {
