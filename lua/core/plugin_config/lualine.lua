@@ -13,7 +13,7 @@ require('lualine').setup {
             {
                 'branch',
                 icon = ''
-            }
+            },
         },
         lualine_c = {
             'diff',
@@ -22,36 +22,26 @@ require('lualine').setup {
             'diagnostics'
         },
         lualine_y = {
-            'encoding'
+            'encoding',
         },
         lualine_z = {
             {
                 'filename',
-                path = 4
-            },
-            'fileformat'
+                path=4
+            }
         }
     },
     inactive_sections = {
-        lualine_a = {
+        lualine_a = {},
+        lualine_b = {
             {
                 'filename',
-            }
+                path=4
+            },
         },
-        lualine_b = {
-
-        },
-        lualine_c = {
-
-        },
-        lualine_x = {
-
-        },
-        lualine_y = {
-
-        },
-        lualine_z = {
-
-        }
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}
     }
 }
