@@ -2,8 +2,6 @@
 
 I use this repository as a way of backing up and syncing my `~/.config/nvim/` directory across multiple systems.
 
-Did I mention that I use neovim, btw?
-
 <img width="1000" alt="nvim_preview" src="https://github.com/user-attachments/assets/103605eb-597e-4e4e-834b-2e928b04e617">
 
 ## Prerequisites
