@@ -3,11 +3,14 @@ require('lualine').setup {
         icons_enabled = true,
         theme = 'auto',
         component_separators = '',
-        section_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
     },
     sections = {
         lualine_a = {
-            'mode',
+            {
+                'filename',
+                path=4
+            },
         },
         lualine_b = {
             {
@@ -19,16 +22,11 @@ require('lualine').setup {
             'diff',
         },
         lualine_x = {
-            'diagnostics'
+            'diagnostics',
         },
-        lualine_y = {
-            'encoding',
-        },
+        lualine_y = {},
         lualine_z = {
-            {
-                'filename',
-                path=4
-            }
+            'mode',
         }
     },
     inactive_sections = {
