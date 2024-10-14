@@ -41,10 +41,6 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
     }
     use 'lewis6991/gitsigns.nvim'
-    use {
-        'goolord/alpha-nvim',
-        requires = 'echasnovski/mini.icons'
-    }
     if packer_bootstrap then
         require('packer').sync()
     end
