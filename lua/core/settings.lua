@@ -12,3 +12,5 @@ vim.opt.expandtab = true
 
 -- Other settings
 vim.opt.scroll = 10
+vim.opt.numberwidth = 2
+
