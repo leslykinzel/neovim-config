@@ -6,7 +6,3 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<C-j>', '10j', {})
 vim.keymap.set('n', '<C-k>', '10k', {})
 
--- This is supposed to mimic `cd ..` in my head .. means
--- "go back", so <leader>.. focuses your cursor on the 
--- previous pane.
-vim.keymap.set('n', '<leader>..', '<C-w>p', {})
