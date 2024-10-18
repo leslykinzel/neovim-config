@@ -10,3 +10,5 @@ vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+-- Other settings
+vim.opt.scroll = 10
