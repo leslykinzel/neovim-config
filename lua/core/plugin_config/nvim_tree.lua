@@ -20,9 +20,6 @@ require("nvim-tree").setup{
     view = {
         side = "right",
     },
-    filters = {
-        custom = { "^.git$" }
-    }
 }
 
 vim.keymap.set('n', 'tr', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
