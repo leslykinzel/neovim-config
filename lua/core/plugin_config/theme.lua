@@ -1,2 +1,2 @@
 vim.o.termguicolors = true
-vim.cmd [[ colorscheme gruber-darker ]]
+vim.cmd [[ colorscheme kanagawa-dragon ]]

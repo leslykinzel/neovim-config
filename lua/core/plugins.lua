@@ -21,7 +21,7 @@ local packer_bootstrap = ensure_packer()
 -- directory.
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use "blazkowolf/gruber-darker.nvim"
+    use 'rebelot/kanagawa.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
