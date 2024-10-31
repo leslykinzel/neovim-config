@@ -15,10 +15,6 @@ end
 
 local packer_bootstrap = ensure_packer()
 
--- Plugins each have their own config file within
--- lua/core/plugin_config/ each config file needs
--- to be called from the init.lua file in the same
--- directory.
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'rebelot/kanagawa.nvim'
