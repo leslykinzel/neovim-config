@@ -7,7 +7,7 @@ require("oil").setup({
   columns = {
     "icon",
     -- "permissions",
-    -- "size",
+    "size",
     -- "mtime",
   },
   -- Buffer-local options to use for oil buffers
@@ -184,5 +184,5 @@ require("oil").setup({
   },
 })
 
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory", silent = true })
 
