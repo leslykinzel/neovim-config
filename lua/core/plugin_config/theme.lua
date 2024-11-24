@@ -1,2 +1,2 @@
 vim.o.termguicolors = true
-vim.cmd [[ colorscheme kanagawa-dragon ]]
+vim.cmd [[ colorscheme lackluster ]]
