@@ -17,10 +17,6 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use {
-        'm4xshen/hardtime.nvim',
-        requires = { { 'MunifTanjim/nui.nvim' } }
-    }
     use 'rebelot/kanagawa.nvim'
     use 'stevearc/oil.nvim'
     use 'nvim-tree/nvim-web-devicons'
