@@ -1,2 +1,2 @@
 vim.o.termguicolors = true
-vim.cmd [[ colorscheme lackluster ]]
+vim.cmd [[ colorscheme gruber-darker ]]

@@ -16,7 +16,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-    use 'slugbyte/lackluster.nvim'
+    use 'blazkowolf/gruber-darker.nvim'
     use 'wbthomason/packer.nvim'
     use 'stevearc/oil.nvim'
     use 'nvim-tree/nvim-web-devicons'
