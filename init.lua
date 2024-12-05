@@ -1,5 +1,14 @@
 require("config.lazy")
 
+-- General settings
+vim.opt.cursorline = true
+vim.opt.relativenumber = true
+
+-- Indentation
+vim.opt.shiftwidth = 4
+vim.opt.scrolloff = 4
+vim.opt.cmdheight = 1
+
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
