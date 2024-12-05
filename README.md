@@ -1,6 +1,6 @@
 # Neovim Config
 
-I use this repository as a way of backing up and syncing my `~/.config/nvim/` directory across multiple systems.
+I use this repository to back up my `~/.config/nvim/` directory across multiple systems.
 
 ## Prerequisites
 
@@ -21,10 +21,10 @@ I use this repository as a way of backing up and syncing my `~/.config/nvim/` di
 
 Unix
 ```
-git clone https://github.com/LeslyKinzel/neovim-config ~/.config/nvim/
+git clone https://github.com/leslykinzel/neovim-config ~/.config/nvim/
 ```
 
 Windows
 ```
-git clone https://github.com/LeslyKinzel/neovim-config ~\AppData\Local\nvim\
+git clone https://github.com/leslykinzel/neovim-config ~\AppData\Local\nvim\
 ```
