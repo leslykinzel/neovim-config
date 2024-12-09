@@ -8,6 +8,14 @@ return {
 
       local autopairs = require "mini.pairs"
       autopairs.setup()
+
+      local keyhints = require "mini.clue"
+      keyhints.setup {
+	triggers = {
+	  -- Leader triggers
+	  { mode = "n", keys = "<leader>" },
+	}
+      }
     end
   },
 }
