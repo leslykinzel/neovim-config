@@ -13,7 +13,7 @@ vim.opt.cmdheight = 1
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Search files from cwd' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live grep from cwd' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Search open buffers' })
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Search files from cwd" })
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep from cwd" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Search open buffers" })
