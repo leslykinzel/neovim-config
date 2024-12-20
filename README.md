@@ -4,22 +4,26 @@ I use this repository to back up my `~/.config/nvim/` directory across multiple 
 
 ## Prerequisites
 
+### Mandatory
+
 - **C Compiler**
 
-    If you're using gcc, you might be missing some header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/) as a lot of Linux distros don't have it pre-installed.
+    If you're using gcc, you might be missing some header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). A lot of Linux distros don't have it pre-installed.
     If you're on Windows & not using WSL for whatever reason, [winlibs](https://www.winlibs.com/#download-release) worked for me.
 
-- **LSP Dependencies**
-
-    LSPs are managed by [Mason](https://github.com/williamboman/mason.nvim). Some LSPs need npm, Go, or some other package manager. Check `:MasonLog` for details about each installation.
+### Non-Mandatory
 
 - [**NerdFonts**](https://www.nerdfonts.com/)
     
-    Not mandatory, but will give your terminal all the special characters that make Neovim look cool. Mono fonts are best.
+    Any NerdFont will give your terminal access to a lot of special icons.
+
+- [**RipGrep**](https://github.com/BurntSushi/ripgrep)
+
+    Required for live grep functionality using Telescope.
 
 ## Installation
 
-Unix
+Linux / MacOS
 ```
 git clone https://github.com/leslykinzel/neovim-config ~/.config/nvim/
 ```
