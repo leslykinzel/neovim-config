@@ -9,6 +9,9 @@ vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 4
 vim.opt.cmdheight = 1
 
+-- Lazy
+vim.keymap.set("n", "<leader>L", ":Lazy<CR>", { silent = true })
+
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 

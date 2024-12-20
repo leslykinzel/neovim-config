@@ -1,8 +1,8 @@
 return {
-    "rebelot/kanagawa.nvim", 
+    "blazkowolf/gruber-darker.nvim",
     enabled = true,
-    config = function() 
-    	vim.cmd.colorscheme "kanagawa-dragon"
+    config = function()
+    	vim.cmd.colorscheme "gruber-darker"
     end 
 }
 
