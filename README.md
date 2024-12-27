@@ -9,7 +9,7 @@ I use this repository to back up my `~/.config/nvim/` directory across multiple 
 - **C Compiler**
 
     If you're using gcc, you might be missing some header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). A lot of Linux distros don't have it pre-installed.
-    If you're on Windows & not using WSL for whatever reason, [winlibs](https://www.winlibs.com/#download-release) worked for me.
+    If you're on Windows & not using WSL or MSYS2 for whatever reason, [winlibs](https://www.winlibs.com/#download-release) worked for me.
 
 ### Non-Mandatory
 
