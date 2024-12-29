@@ -9,6 +9,9 @@ vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 4
 vim.opt.cmdheight = 1
 
+-- Terminal Emulator
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
 -- Lazy
 vim.keymap.set("n", "<leader>L", ":Lazy<CR>", { silent = true })
 
