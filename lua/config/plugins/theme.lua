@@ -11,7 +11,7 @@ return {
       statementStyle = {},
       typeStyle = {},
       transparent = false,         -- do not set background color
-      dimInactive = true,         -- dim inactive window `:h hl-NormalNC`
+      dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
       terminalColors = true,       -- define vim.g.terminal_color_{0,17}
       colors = {                   -- add/modify theme and palette colors
 	palette = {},
@@ -21,7 +21,6 @@ return {
 	  dragon = {
 	    ui = {
 	      float = {
-		bg = "none",
 	      },
 	    }
 	  },

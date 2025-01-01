@@ -2,6 +2,7 @@ require("config.lazy")
 
 -- General settings
 vim.opt.cursorline = true
+vim.opt.number = true
 
 -- Indentation
 vim.opt.shiftwidth = 4
