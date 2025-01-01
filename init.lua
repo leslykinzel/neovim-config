@@ -8,6 +8,7 @@ vim.opt.number = true
 vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 4
 vim.opt.cmdheight = 1
+vim.opt.tabstop = 4
 
 -- Terminal Emulator
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
