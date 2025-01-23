@@ -11,8 +11,8 @@ return {
 
 			for _, mode in ipairs(modes) do
 				vim.api.nvim_set_hl(0, "MiniStatuslineMode" .. mode, {
-					fg = "#FFFFFF",
 					bg = "#323232",
+					fg = "#FFFFFF",
 					bold = false,
 				})
 			end
@@ -28,6 +28,28 @@ return {
 					-- Leader triggers
 					{ mode = "n", keys = "<leader>" },
 				}
+			}
+
+			local movelines = require "mini.move"
+			movelines.setup {
+				mappings = {
+
+					-- Visual mode
+					left = "<C-h>",
+					right = "<C-l>",
+					down = "<C-j>",
+					up = "<C-k>",
+
+					-- Normal mode
+					line_left = "<C-h>",
+					line_right = "<C-l>",
+					line_down = "<C-j>",
+					line_up = "<C-k>",
+				},
+
+				options = {
+					reindent_linewise = true,
+				},
 			}
 		end
 	},
