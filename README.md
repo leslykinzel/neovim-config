@@ -21,6 +21,10 @@ I use this repository to back up my `~/.config/nvim/` directory across multiple 
     
     Any NerdFont will give your terminal access to a lot of special icons.
 
+- [**Lua Language Server**](https://luals.github.io/wiki/)
+
+    Neovim will complain if you don't have this.
+
 - [**RipGrep**](https://github.com/BurntSushi/ripgrep)
 
     Required for live grep functionality using Telescope.
