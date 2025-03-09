@@ -23,7 +23,7 @@ I use this repository to back up my `~/.config/nvim/` directory across multiple 
 
 - [**Lua Language Server**](https://luals.github.io/wiki/)
 
-    Neovim will complain if you don't have this.
+    Neovim will complain if you try to edit lua files without having this in your PATH.
 
 - [**RipGrep**](https://github.com/BurntSushi/ripgrep)
 
