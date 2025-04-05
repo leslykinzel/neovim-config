@@ -28,3 +28,13 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Search files fro
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep from cwd" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Search open buffers" })
 
+-- LSP
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(ev)
+		local client = vim.lsp.get_client_by_id(ev.data.client_id)
+		if client:supports_method("textDocument/completion") then
+			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger=true })
+		end
+	end
+})
+
