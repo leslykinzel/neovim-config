@@ -8,26 +8,20 @@ I use this repository to back up my `~/.config/nvim/` directory across multiple 
 
 - **Neovim**
 
-    0.10 or higher.
+    Version 0.10 or newer
 
 - **C Compiler**
 
-    If you're using gcc, you might be missing some header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). A lot of Linux distros don't have it pre-installed.
-    If you're on Windows I recommend using WSL, MSYS2, or [winlibs](https://www.winlibs.com/#download-release).
+    If you're using gcc, you might be missing some header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). A lot of Linux distros don't have them pre-installed.
+    If you're on Windows, use WSL, MSYS2, or [winlibs](https://www.winlibs.com/#download-release). Or just use zig to avoid all that nonsense.
 
 ### Non-Mandatory
 
 - [**NerdFonts**](https://www.nerdfonts.com/)
-    
-    Any NerdFont will give your terminal access to a lot of special icons.
 
 - [**Lua Language Server**](https://luals.github.io/wiki/)
 
-    Neovim will complain if you try to edit lua files without having this in your PATH.
-
 - [**RipGrep**](https://github.com/BurntSushi/ripgrep)
-
-    Required for live grep functionality using Telescope.
 
 ## Installation
 
