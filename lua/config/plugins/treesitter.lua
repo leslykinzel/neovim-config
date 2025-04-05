@@ -12,19 +12,13 @@ return {
 				-- Add languages to be installed here that you want installed for treesitter
 				ensure_installed = {
 					"c",
-					"cpp",
 					"go",
-					"lua",
 					"python",
-					"zig",
-					"rust",
+					"lua",
 					"php",
-					"javascript",
 					"json",
 					"xml",
 					"bash",
-					"vimdoc",
-					"vim"
 				},
 				modules = {},
 				sync_install = true,
