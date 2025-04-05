@@ -1,9 +1,10 @@
 return {
-	"blazkowolf/gruber-darker.nvim",
-	lazy = false,
+	"rockyzhang24/arctic.nvim",
+	dependencies = { "rktjmp/lush.nvim" },
+	name = "arctic",
+	branch = "main",
 	priority = 1000,
-
 	config = function()
-		vim.cmd.colorscheme("gruber-darker")
-	end,
+		vim.cmd("colorscheme arctic")
+	end
 }
