@@ -5,6 +5,7 @@ vim.opt.cursorline = true
 vim.opt.number = true
 
 -- Indentation
+vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 4
 vim.opt.cmdheight = 1
