@@ -3,10 +3,10 @@ return {
   -- dependencies = { 'echasnovski/mini.icons' },
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
-    local startify = require("alpha.themes.dashboard")
+    local dashboard = require("alpha.themes.dashboard")
     -- available: devicons, mini, default is mini
     -- if provider not loaded and enabled is true, it will try to use another provider
-    startify.section.header.val = {
+    dashboard.section.header.val = {
       [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ]],
       [[⠀⠀⠀⠤⠒⢦⡀⠀⠀⠀⠀⠀⠀⢀⡀⠤⢢⡠⠒⠠⠤⠤⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠤⠤⠐⠒⣲⡖⠤⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠠⠤⠐⡆⠀⠀⢸⠁⠒⠂⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ]],
       [[⠀⠀⠀⡆⠀⠈⢿⣆⠀⠀⢠⠒⠉⠁⠀⠀⠈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⢆⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⣿⣷⡀⠀⠀⠹⡄⠀⠀⠀⠀⠀⢀⠤⠄⣀⣀⠤⠄⠒⠂⠉⠁⠀⠀⠀⠀⡤⣷⣀⠀⠘⡀⠀⠀⠈⠷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ]],
@@ -22,10 +22,10 @@ return {
       [[⠀⠀⠀⠀⠀⠀⠉⠙⠛⠿⠟⠋⠁⠀⠀⠀⠉⠙⠛⠀⠀⠉⠛⠻⠟⠉⠀⠀⠀⠀⠀⠉⠉⠛⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⠿⠟⠀⠀⠀⠀⠀⠈⠉⠉⠙⠛⠛⠻⠿⠉⠉⠛⠛⠛⠿⠿⠛⠁⠀⠀⠀⠀⠀⠉⠉⠛⠛⠛⠋⠀⠀⠀(btw)]],
       [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ]],
     }
-    startify.section.buttons.val = {
-      startify.button("%", "  New file", ":ene <cr>"),
+    dashboard.section.buttons.val = {
+      dashboard.button("%", "  New file", ":ene <cr>"),
     }
 
-    require("alpha").setup(startify.config)
+    require("alpha").setup(dashboard.config)
   end,
 }
