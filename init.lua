@@ -27,6 +27,7 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Search files from cwd" })
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep from cwd" })
+vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Search recent files" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Search open buffers" })
 
 -- LSP
