@@ -6,6 +6,7 @@ return {
     local dashboard = require("alpha.themes.dashboard")
     -- available: devicons, mini, default is mini
     -- if provider not loaded and enabled is true, it will try to use another provider
+
     dashboard.section.header.val = {
       "                                                     ",
       "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
@@ -16,8 +17,10 @@ return {
       "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
       "                                                     ",
     }
+
     dashboard.section.buttons.val = {
       dashboard.button("%", "  New file", ":ene <cr>"),
+      dashboard.button("-", "  Open directory", ":Oil <cr>"),
       dashboard.button("SPC fo", "  Recent", ":Telescope oldfiles <cr>"),
       dashboard.button("SPC ff", "  Find file", ":Telescope find_files <cr>"),
       dashboard.button("SPC fg", "  Live grep", ":Telescope live_grep <cr>"),
@@ -33,6 +36,7 @@ return {
         vim.opt.guicursor:append("a:Cursor/lCursor")
       end,
     })
+
     vim.api.nvim_create_autocmd("BufUnload", {
       buffer = 0,
       desc = "show cursor after alpha",
@@ -43,6 +47,7 @@ return {
         vim.opt.guicursor:remove("a:Cursor/lCursor")
       end,
     })
+
     require("alpha").setup(dashboard.config)
   end,
 }
