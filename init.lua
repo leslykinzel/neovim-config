@@ -3,6 +3,7 @@ require("config.lazy")
 -- General settings
 vim.opt.cursorline = true
 vim.opt.number = true
+vim.opt.mouse = "a"
 
 -- Indentation
 vim.opt.expandtab = true
