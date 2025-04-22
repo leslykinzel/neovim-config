@@ -1,7 +1,7 @@
 require("config.lazy")
 
 -- General settings
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.number = true
 vim.opt.mouse = "a"
 
@@ -11,6 +11,8 @@ vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 4
 vim.opt.cmdheight = 1
 vim.opt.tabstop = 4
+vim.opt.list = true
+vim.opt.listchars = { trail = "·", nbsp = "␣" }
 
 -- Lazy
 vim.keymap.set("n", "<leader>L", "<CMD>Lazy<CR>", { silent = true })
@@ -33,11 +35,11 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Search open buffers
 
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(ev)
-		local client = vim.lsp.get_client_by_id(ev.data.client_id)
-		if client:supports_method("textDocument/completion") then
-			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger=true })
-		end
-	end
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method("textDocument/completion") then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger=true })
+    end
+  end
 })
 
