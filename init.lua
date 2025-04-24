@@ -1,9 +1,15 @@
 require("config.lazy")
 
 -- General settings
+vim.opt.undofile = true
+vim.opt.breakindent = true
 vim.opt.cursorline = false
 vim.opt.number = true
 vim.opt.mouse = "a"
+-- scheduled for startup performance
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
 
 -- Indentation
 vim.opt.expandtab = true
