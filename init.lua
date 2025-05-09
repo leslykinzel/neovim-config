@@ -15,10 +15,8 @@ end)
 
 -- Indentation
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 4
 vim.opt.cmdheight = 1
-vim.opt.tabstop = 4
 
 -- Whitespace
 vim.opt.list = true
@@ -32,14 +30,16 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- Lazy
-vim.keymap.set("n", "<leader>L", "<CMD>Lazy<CR>", { silent = true })
-
 -- Turn off search higlights
 vim.keymap.set("n", "<leader>hl", "<CMD>noh<CR>")
 
 -- Exit Terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+--[[ PLUGIN STUFF ]]--
+
+-- Lazy
+vim.keymap.set("n", "<leader>L", "<CMD>Lazy<CR>", { silent = true })
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -50,14 +50,3 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Search files fro
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep from cwd" })
 vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Search recent files" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Search open buffers" })
-
--- LSP
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if client:supports_method("textDocument/completion") then
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger=true })
-    end
-  end
-})
-
