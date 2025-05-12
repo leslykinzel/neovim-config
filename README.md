@@ -17,11 +17,11 @@ I use this repository to back up my `~/.config/nvim/` directory across multiple 
 
 ### Non-Mandatory
 
-- [**NerdFonts**](https://www.nerdfonts.com/)
+- [**NerdFonts**](https://www.nerdfonts.com/) for display of non-standard glyphs.
 
-- [**Lua Language Server**](https://luals.github.io/wiki/)
+- [**RipGrep**](https://github.com/BurntSushi/ripgrep) for live grep.
 
-- [**RipGrep**](https://github.com/BurntSushi/ripgrep)
+- Package managers for LSP. (Node, Go, Cargo, etc.) Check `:MasonLog`
 
 ## Installation
 
