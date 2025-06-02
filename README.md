@@ -2,26 +2,24 @@
 
 I use this repository to back up my `~/.config/nvim/` directory across multiple systems.
 
-## Prerequisites
+## Dependencies
 
-### Mandatory
+- [**Neovim**](https://github.com/neovim/neovim)
 
-- **Neovim**
+    Version 0.11 or newer.
 
-    Version 0.10 or newer
+- [**C Compiler**](https://ziglang.org/download/)
 
-- **C Compiler**
+    If you're using gcc, you might be missing a bunch of header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). A lot of Linux distros don't have them pre-installed.
+    If you're on Windows, use WSL, MSYS2, or [winlibs](https://www.winlibs.com/#download-release). Or just use Zig to avoid all that nonsense.
 
-    If you're using gcc, you might be missing some header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). A lot of Linux distros don't have them pre-installed.
-    If you're on Windows, use WSL, MSYS2, or [winlibs](https://www.winlibs.com/#download-release). Or just use zig to avoid all that nonsense.
+- [**NerdFonts**](https://www.nerdfonts.com/)
 
-### Non-Mandatory
+- [**RipGrep**](https://github.com/BurntSushi/ripgrep)
 
-- [**NerdFonts**](https://www.nerdfonts.com/) for display of non-standard glyphs.
+- [**FZF**](https://github.com/junegunn/fzf)
 
-- [**RipGrep**](https://github.com/BurntSushi/ripgrep) for live grep.
-
-- Package managers for LSP. (Node, Go, Cargo, etc.) Check `:MasonLog`
+- Package managers for LSP. (Node, Go, Cargo, etc.) Check `:MasonLog`.
 
 ## Installation
 
