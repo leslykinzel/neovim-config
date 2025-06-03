@@ -16,7 +16,6 @@ return {
     local opts = { noremap = true, silent = true }
     local on_attach = function(client, bufnr)
       opts.buffer = bufnr
-
       opts.desc = "Show LSP references"
       keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
 
@@ -62,7 +61,11 @@ return {
     local signs = { Error = "", Warn = "", Hint = "", Info = "" }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+      vim.diagnostic.config({
+        signs = {
+          [type] = { text = icon, texthl = hl, numhl = "" }
+        },
+      })
     end
 
     lspconfig["html"].setup({
@@ -93,7 +96,7 @@ return {
       }
     })
 
-    lspconfig["basedpyright"].setup({
+    lspconfig["pylsp"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

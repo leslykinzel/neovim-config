@@ -22,7 +22,7 @@ return {
         "html",
         "cssls",
         "lua_ls",
-        "basedpyright",
+        "pylsp",
         "gopls",
         "intelephense",
       },
