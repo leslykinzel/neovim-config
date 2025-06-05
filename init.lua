@@ -39,7 +39,7 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 --[[ PLUGIN STUFF ]]--
 
 -- Lazy
-vim.keymap.set("n", "<leader>L", "<CMD>Lazy<CR>", { silent = true })
+vim.keymap.set("n", "<leader>lz", "<CMD>Lazy<CR>", { silent = true })
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
