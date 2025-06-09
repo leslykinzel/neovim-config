@@ -19,7 +19,7 @@ return {
       },
       buffers = {
         theme = "ivy",
-        previewer = true,
+        previewer = false,
         prompt_title = "Buffers"
       }
     }
