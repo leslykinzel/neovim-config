@@ -15,7 +15,7 @@ return {
       live_grep = {
         theme = "ivy",
         previewer = false,
-        prompt_title = "Ripgrep"
+        prompt_title = vim.loop.cwd()
       },
       buffers = {
         theme = "ivy",
