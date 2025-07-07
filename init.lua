@@ -6,7 +6,7 @@ local mini_path = path_package .. "pack/deps/start/mini.nvim"
 if not vim.loop.fs_stat(mini_path) then
   local clone_cmd = { 
     "git", "clone", "--filter=blob:none",
-    "git@github.com/echasnovski/mini.nvim", mini_path
+    "https://github.com/echasnovski/mini.nvim", mini_path
   }
   vim.fn.system(clone_cmd)
   vim.cmd("packadd mini.nvim | helptags ALL")
@@ -32,12 +32,6 @@ now(function()
   vim.cmd("colorscheme default")
 end)
 
--- mini.notify
-now(function()
-  require("mini.notify").setup()
-  vim.notify = require("mini.notify").make_notify()
-end)
-
 -- mini.icons
 now(function() require("mini.icons").setup() end)
 
@@ -49,6 +43,12 @@ later(function() require("mini.pairs").setup() end)
 
 -- mini.cursorword
 later(function() require("mini.cursorword").setup() end)
+
+-- mini.notify
+later(function()
+  require("mini.notify").setup()
+  vim.notify = require("mini.notify").make_notify()
+end)
 
 -- mini.move
 later(function() require("mini.move").setup({
@@ -89,6 +89,15 @@ later(function()
   })
 end)
 
+-- FZF
+later(function() 
+  add("junegunn/fzf.vim")
+  add("junegunn/fzf")
+  vim.env.FZF_DEFAULT_OPTS = "--no-preview"
+  vim.g.fzf_layout = { window = { width = 1, height = 1 } }
+  vim.keymap.set("n", "<leader>ff", "<CMD>FZF<CR>")
+end)
+
 -- Default Indentation
 vim.opt.expandtab = true
 vim.opt.scrolloff = 8
@@ -115,6 +124,6 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-d>", "exit<CR>")
 
--- FZF
-vim.keymap.set("n", "<leader>ff", "<CMD>FZF<CR>")
+-- Disable highlights
+vim.keymap.set("n", "<Esc>", "<CMD>noh<CR>", { silent = true })
 
