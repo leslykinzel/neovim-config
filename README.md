@@ -9,7 +9,9 @@ E.g.
 
 - `{}()[]""''` brackets & quotes auto-close.
 - `CTRL-hjkl` to move selected text around. If no text is selected, the same keys will let you jump between different panes.
-- `SPC-ff` to open fzf file picker.
+- `SPC-ff` to `f`ind `f`iles.
+- `SPC-fb` to `f`ind open `b`uffers.
+- `SPC-rg` to use ripgrep in your current directory.
 - `CTRL-d` to exit terminal mode.
 
 Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim](github.com/echasnovski/mini.nvim).
@@ -37,7 +39,7 @@ Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim
 
 - [**FZF**](https://github.com/junegunn/fzf)
 
-    `:FZF` is used as a file picker.
+- [**RipGrep**](https://github.com/BurntSushi/ripgrep)
 
 ## Installation
 
