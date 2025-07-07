@@ -1,25 +1,43 @@
 # Neovim Config
 
-I use this repository to back up my `~/.config/nvim/` directory across multiple systems.
+This is a simple yet effective Neovim config with as little 
+bloat as possible; stripped down to the essentials with default 
+behaviour preserved or extended slightly in ways that are helpful 
+and not overly intrusive.
 
-## Dependencies
+Shoutout to @echasnovski for making [mini.nvim](github.com/echasnovski/mini.nvim).
 
-- [**Neovim**](https://github.com/neovim/neovim)
+E.g.
 
-    Version 0.11 or newer.
+- `{}()[]""''` brackets & quotes auto-close.
+- `CTRL-hjkl` to move selected text around.
+- `SPC-ff` to open fzf file picker.
+- `CTRL-d` to exit terminal mode.
 
-- [**C Compiler**](https://ziglang.org/download/)
+## Requirements
 
-    If you're using gcc, you might be missing a bunch of header files. Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). A lot of Linux distros don't have them pre-installed.
-    If you're on Windows, use WSL, MSYS2, or [winlibs](https://www.winlibs.com/#download-release). Or just use Zig to avoid all that nonsense.
+- **C Compiler**
+
+    **Linux**
+
+    Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). 
+    A lot of Linux distros don't have them pre-installed. 
+
+    **MacOS**
+
+    Make sure you have the latest XCode command line tools installed.
+
+    **Windows**
+
+    Just use WSL2 and pretend you're on a real operating system.
 
 - [**NerdFonts**](https://www.nerdfonts.com/)
 
-- [**RipGrep**](https://github.com/BurntSushi/ripgrep)
+    Not really needed but these give you file icons and special glyphs that other fonts don't have.
 
 - [**FZF**](https://github.com/junegunn/fzf)
 
-- Package managers for LSP. (Node, Go, Cargo, etc.) Check `:MasonLog`.
+    `:FZF` is used as a file picker.
 
 ## Installation
 

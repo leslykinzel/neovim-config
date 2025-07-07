@@ -1,35 +1,35 @@
--- git@github.com/leslykinzel/neovim-config
+-- multi-file configs are for troglodytes.
 
 local path_package = vim.fn.stdpath("data") .. "/site/"
 local mini_path = path_package .. "pack/deps/start/mini.nvim"
 
 if not vim.loop.fs_stat(mini_path) then
-  vim.cmd("echo 'Installing `mini.nvim`' | redraw")
   local clone_cmd = { 
     "git", "clone", "--filter=blob:none",
     "git@github.com/echasnovski/mini.nvim", mini_path
   }
   vim.fn.system(clone_cmd)
   vim.cmd("packadd mini.nvim | helptags ALL")
-  vim.cmd("echo 'Installed `mini.nvim`' | redraw")
 end
 
--- Set up "mini.deps" (customize to your liking)
+-- Set up "mini.deps"
 require("mini.deps").setup({ path = { package = path_package } })
 
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
   -- General settings
-  vim.g.mapleader = " "
+  vim.g.mapleader       = " "
   vim.opt.termguicolors = true
+  vim.opt.updatetime    = 250
+  vim.opt.undofile      = true
+  vim.opt.breakindent   = true
+  vim.opt.cursorline    = true
+  vim.opt.number        = true
+  vim.opt.showmode      = false
+  vim.opt.mouse         = "a"
+  vim.opt.cmdwinheight  = 15
   vim.cmd("colorscheme default")
-  vim.opt.updatetime = 250
-  vim.opt.undofile = true
-  vim.opt.breakindent = true
-  vim.opt.cursorline = true
-  vim.opt.number = true
-  vim.opt.mouse = "a"
 end)
 
 -- mini.notify
@@ -39,27 +39,10 @@ now(function()
 end)
 
 -- mini.icons
-now(function() require("mini.icons").setup({
-    style = "glyph"
-  })
-end)
+now(function() require("mini.icons").setup() end)
 
 -- mini.statusline
 now(function() require("mini.statusline").setup() end)
-
--- treesitter
-later(function()
-  add({
-    source = "nvim-treesitter/nvim-treesitter",
-    checkout = "master",
-    monitor = "main",
-    hooks = { post_checkout = function() vim.cmd("TSUpdate") end },
-  })
-  require("nvim-treesitter.configs").setup({
-    ensure_installed = { "lua", "vimdoc" },
-    highlight = { enable = true },
-  })
-end)
 
 -- mini.pairs
 later(function() require("mini.pairs").setup() end)
@@ -70,10 +53,10 @@ later(function() require("mini.cursorword").setup() end)
 -- mini.move
 later(function() require("mini.move").setup({
   mappings = {
-    left = "<C-h>",
+    left  = "<C-h>",
     right = "<C-l>",
-    down = "<C-j>",
-    up = "<C-k>",
+    down  = "<C-j>",
+    up    = "<C-k>",
     options = {
       reindent_linewise = true,
     }
@@ -84,18 +67,41 @@ later(function() require("mini.move").setup({
 later(function() require("mini.git").setup() end)
 
 -- scheduled for startup performance
-vim.schedule(function()
+later(function() 
   vim.opt.clipboard = "unnamedplus"
+end)
+
+-- treesitter
+later(function()
+  add({
+    source   = "nvim-treesitter/nvim-treesitter",
+    checkout = "master",
+    monitor  = "main",
+    hooks = { 
+      post_checkout = function() 
+        vim.cmd("TSUpdate")
+      end 
+    },
+  })
+  require("nvim-treesitter.configs").setup({
+    ensure_installed = { "lua", "vimdoc", },
+    highlight = { enable = true },
+  })
 end)
 
 -- Default Indentation
 vim.opt.expandtab = true
-vim.opt.scrolloff = 4
+vim.opt.scrolloff = 8
 vim.opt.cmdheight = 1
 
 -- Whitespace
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- Commands
+vim.api.nvim_create_user_command("Q", function() vim.cmd("q") end, {})
+vim.api.nvim_create_user_command("W", function() vim.cmd("w") end, {})
+vim.api.nvim_create_user_command("WQ", function() vim.cmd("wq") end, {})
 
 -- Window splits
 vim.opt.splitright = true
@@ -105,8 +111,10 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- Exit Terminal mode
+-- Terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-d>", "exit<CR>")
 
 -- FZF
 vim.keymap.set("n", "<leader>ff", "<CMD>FZF<CR>")
+
