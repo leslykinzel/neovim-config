@@ -108,7 +108,7 @@ later(function()
   vim.g.fzf_preview_window = {}
   vim.keymap.set("n", "<leader>ff", "<CMD>Files<CR>")
   vim.keymap.set("n", "<leader>fb", "<CMD>Buffers<CR>")
-  vim.keymap.set("n", "<leader>fg", "<CMD>Rg<CR>")
+  vim.keymap.set("n", "<leader>rg", "<CMD>Rg<CR>")
 end)
 
 -- Commands and shortcuts
