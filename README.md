@@ -5,14 +5,14 @@ bloat as possible; stripped down to the essentials with default
 behaviour preserved or extended slightly in ways that are helpful 
 and not overly intrusive.
 
-Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim](github.com/echasnovski/mini.nvim).
-
 E.g.
 
 - `{}()[]""''` brackets & quotes auto-close.
 - `CTRL-hjkl` to move selected text around. If no text is selected, the same keys will let you jump between different panes.
 - `SPC-ff` to open fzf file picker.
 - `CTRL-d` to exit terminal mode.
+
+Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim](github.com/echasnovski/mini.nvim).
 
 ## Requirements
 
