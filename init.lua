@@ -30,6 +30,16 @@ now(function()
   vim.opt.mouse         = "a"
   vim.opt.cmdwinheight  = 15
   vim.cmd("colorscheme default")
+  -- Default Indentation
+  vim.opt.expandtab = true
+  vim.opt.scrolloff = 8
+  vim.opt.cmdheight = 1
+  -- Whitespace
+  vim.opt.list = true
+  vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+  -- Window splits
+  vim.opt.splitright = true
+  vim.opt.splitbelow = true
 end)
 
 -- mini.icons
@@ -94,36 +104,27 @@ later(function()
   add("junegunn/fzf.vim")
   add("junegunn/fzf")
   vim.env.FZF_DEFAULT_OPTS = "--no-preview"
-  vim.g.fzf_layout = { window = { width = 1, height = 1 } }
-  vim.keymap.set("n", "<leader>ff", "<CMD>FZF<CR>")
+  vim.g.fzf_layout = { window = "15new" }
+  vim.g.fzf_preview_window = {}
+  vim.keymap.set("n", "<leader>ff", "<CMD>Files<CR>")
+  vim.keymap.set("n", "<leader>fb", "<CMD>Buffers<CR>")
+  vim.keymap.set("n", "<leader>fg", "<CMD>Rg<CR>")
 end)
 
--- Default Indentation
-vim.opt.expandtab = true
-vim.opt.scrolloff = 8
-vim.opt.cmdheight = 1
-
--- Whitespace
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-
--- Commands
-vim.api.nvim_create_user_command("Q", function() vim.cmd("q") end, {})
-vim.api.nvim_create_user_command("W", function() vim.cmd("w") end, {})
-vim.api.nvim_create_user_command("WQ", function() vim.cmd("wq") end, {})
-
--- Window splits
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-
--- Terminal mode
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.keymap.set("t", "<C-d>", "exit<CR>")
-
--- Disable highlights
-vim.keymap.set("n", "<Esc>", "<CMD>noh<CR>", { silent = true })
-
+-- Commands and shortcuts
+later(function() 
+  -- Common typos
+  vim.api.nvim_create_user_command("Q", function() vim.cmd("q") end, {})
+  vim.api.nvim_create_user_command("W", function() vim.cmd("w") end, {})
+  vim.api.nvim_create_user_command("WQ", function() vim.cmd("wq") end, {})
+  -- Navigating window splits
+  vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+  vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+  vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+  vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+  -- Terminal mode
+  vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+  vim.keymap.set("t", "<C-d>", "exit<CR>")
+  -- Disable search highlights
+  vim.keymap.set("n", "<Esc>", "<CMD>noh<CR>", { silent = true })
+end)
