@@ -5,7 +5,7 @@ bloat as possible; stripped down to the essentials with default
 behaviour preserved or extended slightly in ways that are helpful 
 and not overly intrusive.
 
-Shoutout to @echasnovski for making [mini.nvim](github.com/echasnovski/mini.nvim).
+Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim](github.com/echasnovski/mini.nvim).
 
 E.g.
 
