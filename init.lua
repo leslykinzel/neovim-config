@@ -21,6 +21,8 @@ now(function()
   -- General settings
   vim.g.mapleader       = " "
   vim.opt.termguicolors = true
+  vim.opt.scrolloff     = 8
+  vim.opt.cmdheight     = 1
   vim.opt.updatetime    = 250
   vim.opt.undofile      = true
   vim.opt.breakindent   = true
@@ -31,9 +33,9 @@ now(function()
   vim.opt.cmdwinheight  = 15
   vim.cmd("colorscheme default")
   -- Default Indentation
+  vim.opt.tabstop = 4
+  vim.opt.shiftwidth = 4
   vim.opt.expandtab = true
-  vim.opt.scrolloff = 8
-  vim.opt.cmdheight = 1
   -- Whitespace
   vim.opt.list = true
   vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
