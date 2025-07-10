@@ -100,12 +100,6 @@ later(function()
   })
 end)
 
--- Colorscheme
-later(function()
-  add("no-clown-fiesta/no-clown-fiesta.nvim")
-  vim.cmd("colorscheme no-clown-fiesta")
-end)
-
 -- FZF
 later(function() 
   add("junegunn/fzf.vim")
