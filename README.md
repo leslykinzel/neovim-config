@@ -31,7 +31,7 @@ Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim
 
     **Windows**
 
-    Just use WSL2 and pretend you're on a real operating system.
+    WSL2 is recommended.
 
 - [**NerdFonts**](https://www.nerdfonts.com/)
 
