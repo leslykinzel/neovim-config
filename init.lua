@@ -12,7 +12,7 @@ if not vim.loop.fs_stat(mini_path) then
   vim.cmd("packadd mini.nvim | helptags ALL")
 end
 
--- Set up "mini.deps"
+-- mini.deps (plugin managr)
 require("mini.deps").setup({ path = { package = path_package } })
 
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
@@ -31,7 +31,6 @@ now(function()
   vim.opt.showmode      = false
   vim.opt.mouse         = "a"
   vim.opt.cmdwinheight  = 15
-  vim.cmd("colorscheme default")
   -- Default Indentation
   vim.opt.tabstop = 4
   vim.opt.shiftwidth = 4
@@ -78,12 +77,12 @@ later(function() require("mini.move").setup({
 -- mini.git
 later(function() require("mini.git").setup() end)
 
--- scheduled for startup performance
+-- Scheduled for startup performance
 later(function() 
   vim.opt.clipboard = "unnamedplus"
 end)
 
--- treesitter
+-- Treesitter
 later(function()
   add({
     source   = "nvim-treesitter/nvim-treesitter",
@@ -99,6 +98,12 @@ later(function()
     ensure_installed = { "lua", "vimdoc", },
     highlight = { enable = true },
   })
+end)
+
+-- Colorscheme
+later(function()
+  add("no-clown-fiesta/no-clown-fiesta.nvim")
+  vim.cmd("colorscheme no-clown-fiesta")
 end)
 
 -- FZF
