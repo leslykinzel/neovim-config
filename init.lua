@@ -1,4 +1,4 @@
--- multi-file configs are for troglodytes.
+-- Multi-file configs are for troglodytes.
 
 local path_package = vim.fn.stdpath("data") .. "/site/"
 local mini_path = path_package .. "pack/deps/start/mini.nvim"
@@ -6,6 +6,7 @@ local mini_path = path_package .. "pack/deps/start/mini.nvim"
 if not vim.loop.fs_stat(mini_path) then
   local clone_cmd = { 
     "git", "clone", "--filter=blob:none",
+    -- Use https:// instead of git@ if not using SSH
     "git@github.com/echasnovski/mini.nvim", mini_path
   }
   vim.fn.system(clone_cmd)
@@ -41,49 +42,64 @@ now(function()
   -- Window splits
   vim.opt.splitright = true
   vim.opt.splitbelow = true
+
+  -- Commands and shortcuts
+
+  -- Common typos
+  vim.api.nvim_create_user_command("Q", function() vim.cmd("q") end, {})
+  vim.api.nvim_create_user_command("W", function() vim.cmd("w") end, {})
+  vim.api.nvim_create_user_command("WQ", function() vim.cmd("wq") end, {})
+
+  -- Navigating window splits
+  vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+  vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+  vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+  vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+
+  -- Terminal mode
+  vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+  -- Disable search highlights
+  vim.keymap.set("n", "<Esc>", "<CMD>noh<CR>", { silent = true })
+
+  -- mini.icons
+  require("mini.icons").setup() 
+
+  -- mini.statusline
+  require("mini.statusline").setup()
 end)
 
--- mini.icons
-now(function() require("mini.icons").setup() end)
-
--- mini.statusline
-now(function() require("mini.statusline").setup() end)
-
--- mini.pairs
-later(function() require("mini.pairs").setup() end)
-
--- mini.cursorword
-later(function() require("mini.cursorword").setup() end)
-
--- mini.notify
 later(function()
+  -- Scheduled for startup performance
+  vim.opt.clipboard = "unnamedplus"
+
+  -- mini.pairs
+  require("mini.pairs").setup()
+
+  -- mini.cursorword
+  require("mini.cursorword").setup()
+
+  -- mini.notify
   require("mini.notify").setup()
   vim.notify = require("mini.notify").make_notify()
-end)
 
--- mini.move
-later(function() require("mini.move").setup({
-  mappings = {
-    left  = "<C-h>",
-    right = "<C-l>",
-    down  = "<C-j>",
-    up    = "<C-k>",
-    options = {
-      reindent_linewise = true,
+  -- mini.move
+  require("mini.move").setup({
+    mappings = {
+      left  = "<C-h>",
+      right = "<C-l>",
+      down  = "<C-j>",
+      up    = "<C-k>",
+      options = {
+        reindent_linewise = true,
+      }
     }
-  }
-}) end)
+  })
 
--- mini.git
-later(function() require("mini.git").setup() end)
+  -- mini.completion
+  require("mini.completion").setup()
 
--- Scheduled for startup performance
-later(function() 
-  vim.opt.clipboard = "unnamedplus"
-end)
-
--- Treesitter
-later(function()
+  -- Treesitter
   add({
     source   = "nvim-treesitter/nvim-treesitter",
     checkout = "master",
@@ -98,10 +114,8 @@ later(function()
     ensure_installed = { "lua", "vimdoc", },
     highlight = { enable = true },
   })
-end)
 
--- FZF
-later(function() 
+  -- FZF
   add("junegunn/fzf.vim")
   add("junegunn/fzf")
   vim.env.FZF_DEFAULT_OPTS = "--no-preview"
@@ -110,22 +124,4 @@ later(function()
   vim.keymap.set("n", "<leader>ff", "<CMD>Files<CR>")
   vim.keymap.set("n", "<leader>fb", "<CMD>Buffers<CR>")
   vim.keymap.set("n", "<leader>rg", "<CMD>Rg<CR>")
-end)
-
--- Commands and shortcuts
-later(function() 
-  -- Common typos
-  vim.api.nvim_create_user_command("Q", function() vim.cmd("q") end, {})
-  vim.api.nvim_create_user_command("W", function() vim.cmd("w") end, {})
-  vim.api.nvim_create_user_command("WQ", function() vim.cmd("wq") end, {})
-  -- Navigating window splits
-  vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-  vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-  vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-  vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-  -- Terminal mode
-  vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-  vim.keymap.set("t", "<C-d>", "exit<CR>")
-  -- Disable search highlights
-  vim.keymap.set("n", "<Esc>", "<CMD>noh<CR>", { silent = true })
 end)
