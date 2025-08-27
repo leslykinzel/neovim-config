@@ -45,6 +45,9 @@ now(function()
 
   -- Commands and shortcuts
 
+  -- Toggle line numbers
+  vim.keymap.set("n", "<C-n>", ":set number!<CR>", { silent = true })
+
   -- Common typos
   vim.api.nvim_create_user_command("Q", function() vim.cmd("q") end, {})
   vim.api.nvim_create_user_command("W", function() vim.cmd("w") end, {})
