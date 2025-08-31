@@ -65,7 +65,7 @@ now(function()
   vim.keymap.set("n", "<Esc>", "<CMD>noh<CR>", { silent = true })
 
   -- mini.icons
-  require("mini.icons").setup() 
+  require("mini.icons").setup()
 
   -- mini.statusline
   require("mini.statusline").setup()
@@ -126,9 +126,4 @@ later(function()
   vim.keymap.set("n", "<leader>ff", "<CMD>Files<CR>")
   vim.keymap.set("n", "<leader>fb", "<CMD>Buffers<CR>")
   vim.keymap.set("n", "<leader>rg", "<CMD>Rg<CR>")
-
-  -- LSP
-  vim.lsp.config("*", {
-    root_markers = { ".git" },
-  })
 end)
