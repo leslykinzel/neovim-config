@@ -2,7 +2,7 @@ local path_package = vim.fn.stdpath("data") .. "/site/"
 local mini_path = path_package .. "pack/deps/start/mini.nvim"
 
 if not vim.loop.fs_stat(mini_path) then
-  local clone_cmd = { 
+  local clone_cmd = {
     "git", "clone", "--filter=blob:none",
     -- Use https:// instead of git@ if not using SSH
     "git@github.com/echasnovski/mini.nvim", mini_path
@@ -27,6 +27,7 @@ now(function()
   vim.opt.breakindent   = true
   vim.opt.cursorline    = true
   vim.opt.number        = true
+  vim.opt.signcolumn    = "yes"
   vim.opt.showmode      = false
   vim.opt.mouse         = "a"
   vim.opt.cmdwinheight  = 15
@@ -105,10 +106,10 @@ later(function()
     source   = "nvim-treesitter/nvim-treesitter",
     checkout = "master",
     monitor  = "main",
-    hooks = { 
-      post_checkout = function() 
+    hooks = {
+      post_checkout = function()
         vim.cmd("TSUpdate")
-      end 
+      end
     },
   })
   require("nvim-treesitter.configs").setup({
@@ -125,4 +126,9 @@ later(function()
   vim.keymap.set("n", "<leader>ff", "<CMD>Files<CR>")
   vim.keymap.set("n", "<leader>fb", "<CMD>Buffers<CR>")
   vim.keymap.set("n", "<leader>rg", "<CMD>Rg<CR>")
+
+  -- LSP
+  vim.lsp.config("*", {
+    root_markers = { ".git" },
+  })
 end)
