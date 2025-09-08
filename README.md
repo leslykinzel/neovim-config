@@ -31,7 +31,7 @@ Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim
 
     **Windows**
 
-    WSL2 is recommended.
+    Make sure you have MSVC & Visual Studio build tools.
 
 - [**NerdFonts**](https://www.nerdfonts.com/)
 
