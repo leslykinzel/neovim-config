@@ -22,9 +22,8 @@ Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim
 
     **Linux**
 
-    Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/). 
-    A lot of Linux distros don't have them pre-installed. 
-
+    Make sure you have [build-essentials](https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/).
+  
     **MacOS**
 
     Make sure you have the latest XCode command line tools installed.
@@ -35,11 +34,15 @@ Shoutout to [@echasnovski](https://github.com/echasnovski) for making [mini.nvim
 
 - [**NerdFonts**](https://www.nerdfonts.com/)
 
-    Not really needed but these give you file icons and special glyphs that other fonts don't have.
+   Set one of these as your terminal's font for icon & glyph support.
 
 - [**FZF**](https://github.com/junegunn/fzf)
 
+   The most based file picker.
+
 - [**RipGrep**](https://github.com/BurntSushi/ripgrep)
+
+   Grep but better, and inside your editor.
 
 ## Installation
 
