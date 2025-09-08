@@ -50,5 +50,5 @@ git clone https://github.com/leslykinzel/neovim-config ~/.config/nvim/
 
 Windows
 ```
-git clone https://github.com/leslykinzel/neovim-config "env:%USERPROFILE%\AppData\Local\nvim\"
+git clone https://github.com/leslykinzel/neovim-config %USERPROFILE%\AppData\Local\nvim\
 ```
