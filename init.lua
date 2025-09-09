@@ -98,6 +98,14 @@ later(function()
     }
   })
 
+  -- mini.align
+  require("mini.align").setup({
+      mappings = {
+          start = "",
+          start_with_preview = "<leader>ga",
+      }
+  })
+
   -- mini.completion
   require("mini.completion").setup()
 
