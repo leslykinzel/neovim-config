@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(mini_path) then
   local clone_cmd = {
     "git", "clone", "--filter=blob:none",
     -- Use https:// instead of git@ if not using SSH
-    "git@github.com/echasnovski/mini.nvim", mini_path
+    "https://github.com/echasnovski/mini.nvim", mini_path
   }
   vim.fn.system(clone_cmd)
   vim.cmd("packadd mini.nvim | helptags ALL")
@@ -25,8 +25,8 @@ now(function()
   vim.opt.updatetime    = 250
   vim.opt.undofile      = true
   vim.opt.breakindent   = true
-  vim.opt.cursorline    = true
-  vim.opt.number        = true
+  vim.opt.cursorline    = false
+  vim.opt.number        = false
   vim.opt.signcolumn    = "yes"
   vim.opt.showmode      = false
   vim.opt.mouse         = "a"
